@@ -47,3 +47,13 @@ jobs:
         with:
           name: leap-year-jar-${{ steps.get_version.outputs.version }}
           path: target/leap-year-${{ steps.get_version.outputs.version }}.jar
+
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v${{ steps.get_version.outputs.version }}
+          name: leap-year v${{ steps.get_version.outputs.version }}
+          body: "Automated release for version ${{ steps.get_version.outputs.version }}"
+          artifacts: target/leap-year-${{ steps.get_version.outputs.version }}.jar
+          draft: false
+          prerelease: false
