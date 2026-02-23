@@ -540,5 +540,8 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+# Maven target folder
+/target/
+
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio

@@ -12,49 +12,49 @@ class LeapYearCalculatorTest {
     @Test
     @DisplayName("Divisible by 4 but not by 100 should be leap year")
     void shouldReturnTrueForTypicalLeapYear() {
-        assertTrue(calculator.isLeapYear(2024));
+        assertTrue(LeapYearCalculator.isLeapYear(2024));
     }
 
     @Test
     @DisplayName("Divisible by 100 but not by 400 should not be leap year")
     void shouldReturnFalseForCenturyYear() {
-        assertFalse(calculator.isLeapYear(1900));
+        assertFalse(LeapYearCalculator.isLeapYear(1900));
     }
 
     @Test
     @DisplayName("Divisible by 400 should be leap year")
     void shouldReturnTrueForFourHundredRule() {
-        assertTrue(calculator.isLeapYear(2000));
+        assertTrue(LeapYearCalculator.isLeapYear(2000));
     }
 
     @Test
     @DisplayName("Not divisible by 4 should not be leap year")
     void shouldReturnFalseForCommonYear() {
-        assertFalse(calculator.isLeapYear(2023));
+        assertFalse(LeapYearCalculator.isLeapYear(2023));
     }
 
     @Test
     @DisplayName("Lower boundary year 1 should not be leap year")
     void shouldHandleLowerBoundary() {
-        assertFalse(calculator.isLeapYear(1));
+        assertFalse(LeapYearCalculator.isLeapYear(1));
     }
 
     @Test
     @DisplayName("Year 4 should be leap year")
     void shouldHandleFirstLeapYear() {
-        assertTrue(calculator.isLeapYear(4));
+        assertTrue(LeapYearCalculator.isLeapYear(4));
     }
 
     @Test
     @DisplayName("Zero year should throw exception")
     void shouldThrowExceptionForZeroYear() {
-        assertThrows(IllegalArgumentException.class, () -> calculator.isLeapYear(0));
+        assertThrows(IllegalArgumentException.class, () -> LeapYearCalculator.isLeapYear(0));
     }
 
     @Test
     @DisplayName("Negative year should throw exception")
     void shouldThrowExceptionForNegativeYear() {
-        assertThrows(IllegalArgumentException.class, () -> calculator.isLeapYear(-2024));
+        assertThrows(IllegalArgumentException.class, () -> LeapYearCalculator.isLeapYear(-2024));
     }
 
     @Test

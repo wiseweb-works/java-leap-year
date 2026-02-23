@@ -1,4 +1,3 @@
-
 # Java Leap Year Checker
 
 A simple **Maven-based Java project** that determines whether a given year is a **leap year**. This project demonstrates basic Java syntax, conditional logic, and how to structure a Maven project.
@@ -35,7 +34,7 @@ java-leap-year/
 ├── .gitignore
 └── LICENSE
 └── README.md
-````
+```
 
 ## 🛠️ How to Build and Run
 
@@ -44,7 +43,7 @@ java-leap-year/
 ```bash
 git clone https://github.com/wiseweb-works/java-leap-year.git
 cd java-leap-year
-````
+```
 
 2. **Build the project with Maven:**
 
@@ -58,7 +57,7 @@ mvn clean compile
 mvn exec:java -Dexec.mainClass="com.example.leapyear.LeapYearCalculator"
 ```
 
-4. **Run tests (if any):**
+4. **Run tests:**
 
 ```bash
 mvn test
