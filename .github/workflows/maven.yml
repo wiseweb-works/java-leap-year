@@ -39,7 +39,7 @@ jobs:
       - name: Get version from pom.xml
         id: get_version
         run: |
-          VERSION=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
+          VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Upload JAR
